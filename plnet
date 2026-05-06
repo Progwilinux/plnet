@@ -2,7 +2,7 @@
 
 . /etc/os-release
 
-echo -e "\e[1;32mplnet 26.4\e[0m on $PRETTY_NAME. Made by \e[0;33mprogwi0\e[0m for \033[34mProgwilinux\e[0m."
+echo -e "\e[1;32mplnet 26.5\e[0m on $PRETTY_NAME. Made by \e[0;33mprogwi0\e[0m for \033[34mProgwilinux\e[0m."
 
 if [ "$1" = "up" ]; then
 	ip link set $2 up
