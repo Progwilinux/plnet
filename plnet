@@ -6,14 +6,14 @@ echo -e "\e[1;32mplnet 26.5\e[0m on $PRETTY_NAME. Made by \e[0;33mprogwi0\e[0m f
 
 if [ "$1" = "up" ]; then
 	ip link set $2 up
-elif [ "$chse" = "addr" ]; then
+elif [ "$1" = "addr" ]; then
 	ip addr add $3/$4 dev $2
-elif [ "$chse" = "route" ]; then
+elif [ "$1" = "route" ]; then
 	ip route add default via $3 dev $2
-elif [ "$chse" = "dhcp" ]; then
+elif [ "$1" = "dhcp" ]; then
 	udhcpc -i $2
-elif [ "$chse" = "check" ]; then
+elif [ "$1" = "check" ]; then
 	ping 8.8.8.8
-elif [ "$chse" = "list" ]; then
+elif [ "$1" = "list" ]; then
 	ip link list
 fi
